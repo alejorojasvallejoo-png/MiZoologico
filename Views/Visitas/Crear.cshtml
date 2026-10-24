@@ -1,0 +1,58 @@
+
+@model MiZoologico.Models.Visita
+
+@{
+    ViewData["Title"] = "Registrar visita";
+}
+
+<h1>Registrar visita</h1>
+
+<p>Completa este formulario para visitar el zoológico.</p>
+
+<form asp-controller="Visitas" asp-action="Crear" method="post">
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="mb-3">
+        <label asp-for="Nombre" class="form-label">
+            Nombre:
+        </label>
+
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="AnimalFavorito" class="form-label">
+            Animal favorito:
+        </label>
+
+        <select asp-for="AnimalFavorito" class="form-select">
+            <option value="">Selecciona un animal</option>
+            <option value="León">León</option>
+            <option value="Elefante">Elefante</option>
+            <option value="Jirafa">Jirafa</option>
+        </select>
+
+        <span asp-validation-for="AnimalFavorito"
+              class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Fecha" class="form-label">
+            Fecha de visita:
+        </label>
+
+        <input asp-for="Fecha" type="date" class="form-control" />
+        <span asp-validation-for="Fecha" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Registrar visita
+    </button>
+
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

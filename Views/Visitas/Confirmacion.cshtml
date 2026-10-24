@@ -1,0 +1,32 @@
+
+@model MiZoologico.Models.Visita
+
+@{
+    ViewData["Title"] = "Confirmación";
+}
+
+<div class="alert alert-success mt-4">
+
+    <h2>¡Visita registrada!</h2>
+
+    <p>Gracias, @Model.Nombre.</p>
+
+    <p>
+        Tu animal favorito es:
+        <strong>@Model.AnimalFavorito</strong>
+    </p>
+
+    <p>
+        Fecha seleccionada:
+        <strong>@Model.Fecha.ToString("dd/MM/yyyy")</strong>
+    </p>
+
+    <p>Tu solicitud fue procesada correctamente.</p>
+
+</div>
+
+<a asp-controller="Visitas"
+   asp-action="Crear"
+   class="btn btn-success">
+    Registrar otra visita
+</a>

@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center mb-4">
+    <h1>Bienvenidos a Mi Zoológico</h1>
+    <p>Conoce algunos animales y aprende sobre ellos.</p>
+</div>
+
+<h2>Nuestros animales</h2>
+
+<div class="row mt-3">
+
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3 class="card-title">León</h3>
+                <p class="card-text">
+                    El león es uno de los felinos más grandes.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3 class="card-title">Elefante</h3>
+                <p class="card-text">
+                    El elefante es el animal terrestre más grande.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-3">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3 class="card-title">Jirafa</h3>
+                <p class="card-text">
+                    La jirafa es el animal terrestre más alto.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="text-center mt-4">
+    <h2>¿Quieres visitarnos?</h2>
+    <p>Completa nuestro formulario de visita.</p>
+
+    <a asp-controller="Visitas"
+       asp-action="Crear"
+       class="btn btn-success">
+        Registrar visita
+    </a>
+</div>
